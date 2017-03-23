@@ -17,9 +17,9 @@ prose:
     - _config.yml
 
 gems:
-  #- jekyll-menus
-  - jekyll-seo-tag
-  - jekyll-sitemap
+  # - jekyll-menus
+  # - jekyll-seo-tag
+  # - jekyll-sitemap
 
 exclude:
   - 'Gemfile'
