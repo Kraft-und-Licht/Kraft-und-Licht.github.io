@@ -1,4 +1,3 @@
-{% if site.data.navigation %}
 <nav>
     {% for link in site.data.navigation %}
     {% assign class = "" %}
@@ -11,7 +10,6 @@
     <a href="{{ link.link }}" class="{{ class }}">{{ link.name }}</a>
     {% endfor %}
 </nav>
-{% endif %}
 <div class="menu__toggle"></div>
 <div class="menu">
     <ul>
