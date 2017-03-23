@@ -6,7 +6,7 @@
     {% if jekyll.environment == "production" %}{% include errorception.html %}{% endif %}
     {% if jekyll.environment == "production" %}{% include analytics.html %}{% endif %}
     <link rel="stylesheet" href="{{ site.baseurl }}{{ '/assets/css/style.css?v=' | append: site.github.build_revision }}">
-    {% seo %}
+    {% comment %}{% seo %}{% endcomment %}
 </head>
 <body class="layout-{{ page.layout }}">
 <div id="app">
