@@ -1,0 +1,57 @@
+{% if site.data.navigation %}
+<nav>
+    {% for link in site.data.navigation %}
+    {% assign class = "" %}
+    {% if link.highlight %}
+    {% assign class = class | append: " highlight" %}
+    {% endif %}
+    {% if link.link == page.url %}
+    {% assign class = class | append: " active" %}
+    {% endif %}
+    <a href="{{ link.link }}" class="{{ class }}">{{ link.name }}</a>
+    {% endfor %}
+</nav>
+{% endif %}
+<div class="menu__toggle"></div>
+<div class="menu">
+    <ul>
+        <li>
+            <a href="/" title="Home">Home</a>
+        </li>
+        {% for post in site.books limit: 2 %}
+        <li>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+        {% for post in site.cookies limit: 2 %}
+        <li>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+        {% for post in site.experiences limit: 2 %}
+        <li>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+        {% for post in site.locations limit: 2 %}
+        <li>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+        {% for post in site.posts limit: 2 %}
+        <li>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+        {% for post in site.services limit: 2 %}
+        <li>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+        {% for post in site.snippets limit: 2 %}
+        <li>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
